@@ -1,3 +1,7 @@
+**Live Demo:** [https://janscheme-ai.onrender.com/](https://janscheme-ai.onrender.com/)
+
+*(Note: Hosted on Render's free tier. The server spins down when inactive, so it may take ~50 seconds to load the very first time you open it).*
+
 # 🏛️ JanScheme AI: Smart Welfare Discovery Engine
 
 JanScheme AI is an intelligent, real-time Retrieval-Augmented Generation (RAG) pipeline designed to bridge the information gap in government welfare. By dynamically extracting user demographics through natural conversation, the engine queries the live web to find and summarize highly relevant, localized government schemes and scholarships.
