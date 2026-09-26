@@ -1,20 +1,25 @@
-# JanScheme AI - Live Government Scheme Discovery
+# 🏛️ JanScheme AI: Smart Welfare Discovery Engine
 
-## Architecture & Features
-* **Modern SDK:** Migrated from deprecated `@google/generative-ai` to the current `@google/genai` SDK.
-* **Fast & Cost-Effective:** Uses `gemini-2.5-flash-lite` for low-cost, high-throughput requests.
-* **Live Web Grounding:** Uses Google Search grounding for real-time web discovery.
-* **Optimized Execution:** Separates profile extraction from scheme search, ensuring normal chat does not trigger unnecessary web searches.
-* **Resilience:** Adds exponential backoff and jitter for transient 429/5xx failures.
-* **Performance:** Adds 5-minute server-side caching and de-duplicates simultaneous searches for the same profile.
-* **Frontend Integration:** Returns grounding sources to the frontend. Serves the frontend and API from the same Express server for easier deployment.
-* **Security:** Keeps the Gemini key strictly server-side in the `.env` file.
+JanScheme AI is an intelligent, real-time Retrieval-Augmented Generation (RAG) pipeline designed to bridge the information gap in government welfare. By dynamically extracting user demographics through natural conversation, the engine queries the live web to find and summarize highly relevant, localized government schemes and scholarships.
 
-## Setup Instructions
-1. Install Node.js 20+.
-2. Copy `.env.example` to `.env`.
-3. Put your NEW Gemini API key in `.env`.
-4. Run the following commands in your terminal:
-   ```bash
-   npm install
-   npm start
+## 🚀 Key Features
+* **Conversational Profiling:** Uses an LLM to naturally converse with users and autonomously build a JSON-structured demographic profile.
+* **Live Web Grounding (RAG):** Integrates the Tavily Search API to fetch up-to-date government schemes, eliminating LLM hallucinations.
+* **High-Speed Inference:** Powered by Groq's LPU architecture for near-instantaneous LLM responses.
+* **Smart Auto-Parsing:** Features a custom fuzzy-matching algorithm to handle user misspellings and map them directly to system parameters.
+* **Responsive UI:** A modern, accessible interface with a dual Light/Dark theme built on Tailwind CSS.
+
+## 🛠️ Tech Stack
+* **Backend:** Node.js, Express.js
+* **AI/LLM:** Groq API
+* **Search Engine:** Tavily Search API
+* **Frontend:** HTML5, Tailwind CSS, Vanilla JavaScript
+
+## 💻 Local Setup
+1. Clone the repository.
+2. Install dependencies by running `npm install` in your terminal.
+3. Create a `.env` file in the root directory and add your API keys:
+   ```env
+   GROQ_API_KEY=your_groq_key_here
+   TAVILY_API_KEY=your_tavily_key_here
+   PORT=3000
